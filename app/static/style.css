@@ -21,7 +21,8 @@ h1, h2, h3 {
 
 /* Form styles */
 form {
-    max-width: 500px;
+    max-width: 100%;
+    width: 90%; /* Adjusted width for smaller screens */
     margin: 0 auto;
     background: #fff;
     padding: 20px;
@@ -79,6 +80,7 @@ table th {
 @media (max-width: 768px) {
     form {
         padding: 10px;
+        width: 100%;
     }
 
     input[type="number"] {
@@ -229,47 +231,27 @@ h3:nth-of-type(15)::before {
     content: 'زاوية مكلحون';
 }
 
-/* K1 Table: عرض الابجور */
-h3:nth-of-type(16)::before {
-    content: 'عرض الابجور';
-}
-
-/* K2 Table: عدد قطع الابجور */
-h3:nth-of-type(17)::before {
-    content: 'عدد قطع الابجور';
-}
-
 /* J1 Table: مكلحون عرض */
-h3:nth-of-type(18)::before {
+h3:nth-of-type(16)::before {
     content: 'مكلحون عرض';
 }
 
 /* J2 Table: مكلحون ارتفاع */
-h3:nth-of-type(19)::before {
+h3:nth-of-type(17)::before {
     content: 'مكلحون ارتفاع';
 }
 
-/* G1 Table: عرض زجاج الدفة */
-h3:nth-of-type(20)::before {
-    content: 'عرض زجاج الدفة';
-}
-
-/* G2 Table: ارتفاع زجاج الدفة */
-h3:nth-of-type(21)::before {
-    content: 'ارتفاع زجاج الدفة';
-}
-
 /* E1 Table: كرسي المنخل عرض */
-h3:nth-of-type(22)::before {
+h3:nth-of-type(18)::before {
     content: 'كرسي المنخل عرض';
 }
 
 /* E2 Table: كرسي المنخل ارتفاع */
-h3:nth-of-type(23)::before {
+h3:nth-of-type(19)::before {
     content: 'كرسي المنخل ارتفاع';
 }
 
 /* Y Table: يو ابجور */
-h3:nth-of-type(24)::before {
+h3:nth-of-type(20)::before {
     content: 'يو ابجور';
 }
