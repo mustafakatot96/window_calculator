@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <h1>Result</h1>
+    <h2>Total Square Meters: {{ mt_total }}</h2>
+    <h2>Total Cost: {{ p_total }}</h2>
+
+    {% for window_type, num_piece in num_pieces.items() %}
+        <h3>{{ window_type }} Table</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Window Number</th>
+                    <th>Dimensions</th>
+                    <th>Number of Pieces</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for window_number, dimensions in window_dimensions.items() %}
+                    {% if window_type in dimensions %}
+                        {% set dimension = dimensions[window_type] %}
+                        {% set pieces = num_piece %}
+                        <tr>
+                            <td>{{ window_number }}</td>
+                            <td>{{ dimension }}</td>
+                            <td>{{ pieces }}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endfor %}
+</body>
+</html>
