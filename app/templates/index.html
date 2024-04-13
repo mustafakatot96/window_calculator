@@ -3,33 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Window Calculator</title>
+    <title>حاسبة النوافذ</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Link to your CSS file -->
 </head>
 <body>
-    <h1>Window Calculator</h1>
+    <h1>حاسبة النوافذ</h1>
     <form id="window_form" action="/" method="post">
         <input type="hidden" id="window_count" name="window_count" value="1">
         <div id="windows">
             <div class="window" id="window_1">
-                <label for="window_number_1">Window Number:</label>
+                <label for="window_number_1">رقم النافذة:</label>
                 <input type="number" step="0.01" id="window_number_1" name="window_number_1" required><br><br>
 
-                <label for="x1_1">Window Width (X1):</label>
+                <label for="x1_1">عرض فتحة الشباك:</label>
                 <input type="number" step="0.01" id="x1_1" name="x1_1" required><br><br>
 
-                <label for="x2_1">Window Height (X2):</label>
+                <label for="x2_1">ارتفاع فتحة الشباك:</label>
                 <input type="number" step="0.01" id="x2_1" name="x2_1" required><br><br>
 
-                <label for="q_1">Part Dimension (Q):</label>
+                <label for="q_1">ارتفاع صندوق الابجور:</label>
                 <input type="number" step="0.01" id="q_1" name="q_1" required><br><br>
 
-                <label for="mp_1">Price per Square Meter (MP):</label>
+                <label for="mp_1">السعر لكل متر مربع:</label>
                 <input type="number" step="0.01" id="mp_1" name="mp_1" required><br><br>
             </div>
         </div>
-        <button type="button" id="add_window">Add Window</button>
-        <input type="submit" value="Calculate">
+        <button type="button" id="add_window">إضافة نافذة</button>
+        <input type="submit" value="حساب">
     </form>
 
     <script>

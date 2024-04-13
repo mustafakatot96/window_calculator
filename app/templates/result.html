@@ -3,22 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result</title>
+    <title>النتيجة</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Link to your CSS file -->
 </head>
 <body>
-    <h1>Result</h1>
-    <h2>Total Square Meters: {{ mt_total }}</h2>
-    <h2>Total Cost: {{ p_total }}</h2>
+    <h1>النتيجة</h1>
+    <h2>مجموع المتر المربع: {{ mt_total }}</h2>
+    <h2>التكلفة الإجمالية: {{ p_total }}</h2>
 
     {% for window_type, num_piece in num_pieces.items() %}
-        <h3>{{ window_type }} Table</h3>
+        {% set table_title = {
+            'A1': 'أمباطية/عليون',
+            'A2': 'جنب',
+            'B1': 'دفات زجاج/عرض',
+            'B2': 'دفات زجاج/ارتفاع',
+            'B3': 'دفات منخل/عرض',
+            'B4': 'دفات منخل/ارتفاع',
+            'U': 'يو جنب',
+            'C1': 'برواز/عرض',
+            'C2': 'برواز/ارتفاع',
+            'D1': 'صندوق ابجور/عرض',
+            'D2': 'صندوق ابجور/طول',
+            'T': 'تي دبل',
+            'F': 'ماسورة المطور',
+            'R': 'غطاية صندوق',
+            'H': 'زاوية المكلحون',
+            'K1': 'عرض الابجور',
+            'K2': 'عدد قطع الابجور',
+            'J1': 'مكلحون عرض',
+            'J2': 'مكلحون ارتفاع',
+            'G1': 'عرض زجاج الدفة',
+            'G2': 'ارتفاع زجاج الدفة',
+            'E1': 'كرسي المنخل/عرض',
+            'E2': 'كرسي المنخل/ارتفاع',
+            'Y': 'يو ابجور'
+        } %}
+        <h3>{{ table_title[window_type] }}</h3>
         <table>
             <thead>
                 <tr>
-                    <th>Window Number</th>
-                    <th>Dimensions</th>
-                    <th>Number of Pieces</th>
+                    <th>رقم النافذة</th>
+                    <th>الأبعاد</th>
+                    <th>عدد القطع</th>
                 </tr>
             </thead>
             <tbody>

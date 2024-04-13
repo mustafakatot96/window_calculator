@@ -17,12 +17,12 @@ body {
 h1, h2, h3 {
     font-weight: bold; /* Emphasize headers */
     margin-bottom: 10px; /* Consistent spacing */
+    text-align: center; /* Center header text */
 }
 
 /* Form styles */
 form {
-    max-width: 100%;
-    width: 90%; /* Adjusted width for smaller screens */
+    max-width: 500px;
     margin: 0 auto;
     background: #fff;
     padding: 20px;
@@ -62,8 +62,11 @@ input[type="submit"]:hover {
 /* Table styles */
 table {
     width: 100%;
-    margin-top: 20px;
     border-collapse: collapse;
+    margin-top: 20px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden; /* Ensure rounded corners are applied */
 }
 
 table th, table td {
@@ -76,182 +79,37 @@ table th {
     background-color: #f2f2f2;
 }
 
+/* Positioning for table titles */
+table caption {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     form {
         padding: 10px;
-        width: 100%;
     }
 
     input[type="number"] {
         width: 100%;
     }
-}
 
-/* CSS content replacement */
-/* English term: Arabic translation */
-/* Replace with Arabic translation using ::before pseudo-element */
-/* Example: */
-/* .class-name::before {
-      content: 'Arabic translation';
-   } */
+    table {
+        display: block;
+        overflow-x: auto;
+    }
 
-/* Add window: أضف شباك */
-#add_window::before {
-    content: 'أضف شباك';
-}
+    table thead,
+    table tbody,
+    table tr,
+    table th,
+    table td {
+        display: block;
+    }
 
-/* Calculate: أحسب */
-input[type="submit"]::before {
-    content: 'أحسب';
-}
-
-/* Result: النتائج */
-h1::before {
-    content: 'النتائج';
-}
-
-/* Total Square Meters: مجموع الأمتار */
-h2:nth-of-type(1)::before {
-    content: 'مجموع الأمتار';
-}
-
-/* Total Cost: التكلفة الكلية */
-h2:nth-of-type(2)::before {
-    content: 'التكلفة الكلية';
-}
-
-/* Window Number: رقم الشباك */
-label[for^="window_number"]::before {
-    content: 'رقم الشباك';
-}
-
-/* Window Width (X1): العرض */
-label[for^="x1"]::before {
-    content: 'العرض';
-}
-
-/* Window Height (X2): الطول */
-label[for^="x2"]::before {
-    content: 'الطول';
-}
-
-/* Part Dimension (Q): ارتفاع صندوق الأبجور */
-label[for^="q"]::before {
-    content: 'ارتفاع صندوق الأبجور';
-}
-
-/* Price per Square Meter (MP): سعر المتر */
-label[for^="mp"]::before {
-    content: 'سعر المتر';
-}
-
-/* Dimensions: القياس */
-th:nth-of-type(2)::before {
-    content: 'القياس';
-}
-
-/* Number of Pieces: عدد القطع */
-th:nth-of-type(3)::before {
-    content: 'عدد القطع';
-}
-
-/* A1 Table: امباطية/عليون */
-h3:nth-of-type(1)::before {
-    content: 'امباطية/عليون';
-}
-
-/* A2 Table: جنب */
-h3:nth-of-type(2)::before {
-    content: 'جنب';
-}
-
-/* B1 Table: دفة دبل تحت فوق */
-h3:nth-of-type(3)::before {
-    content: 'دفة دبل تحت فوق';
-}
-
-/* B2 Table: دفة دبل ارتفاع */
-h3:nth-of-type(4)::before {
-    content: 'دفة دبل ارتفاع';
-}
-
-/* B3 Table: دفة منخل تحت فوق */
-h3:nth-of-type(5)::before {
-    content: 'دفة منخل تحت فوق';
-}
-
-/* B4 Table: دفة منخل ارتفاع */
-h3:nth-of-type(6)::before {
-    content: 'دفة منخل ارتفاع';
-}
-
-/* U Table: يو جنب */
-h3:nth-of-type(7)::before {
-    content: 'يو جنب';
-}
-
-/* C1 Table: برواز عرض */
-h3:nth-of-type(8)::before {
-    content: 'برواز عرض';
-}
-
-/* C2 Table: برواز ارتفاع */
-h3:nth-of-type(9)::before {
-    content: 'برواز ارتفاع';
-}
-
-/* D1 Table: صندوق ابجور عرض */
-h3:nth-of-type(10)::before {
-    content: 'صندوق ابجور عرض';
-}
-
-/* D2 Table: صندوق ابجور ارتفاع */
-h3:nth-of-type(11)::before {
-    content: 'صندوق ابجور ارتفاع';
-}
-
-/* T Table: تي دبل */
-h3:nth-of-type(12)::before {
-    content: 'تي دبل';
-}
-
-/* F Table: ماسورة الماطور */
-h3:nth-of-type(13)::before {
-    content: 'ماسورة الماطور';
-}
-
-/* R Table: غطاية صندوق */
-h3:nth-of-type(14)::before {
-    content: 'غطاية صندوق';
-}
-
-/* H Table: زاوية مكلحون */
-h3:nth-of-type(15)::before {
-    content: 'زاوية مكلحون';
-}
-
-/* J1 Table: مكلحون عرض */
-h3:nth-of-type(16)::before {
-    content: 'مكلحون عرض';
-}
-
-/* J2 Table: مكلحون ارتفاع */
-h3:nth-of-type(17)::before {
-    content: 'مكلحون ارتفاع';
-}
-
-/* E1 Table: كرسي المنخل عرض */
-h3:nth-of-type(18)::before {
-    content: 'كرسي المنخل عرض';
-}
-
-/* E2 Table: كرسي المنخل ارتفاع */
-h3:nth-of-type(19)::before {
-    content: 'كرسي المنخل ارتفاع';
-}
-
-/* Y Table: يو ابجور */
-h3:nth-of-type(20)::before {
-    content: 'يو ابجور';
+    table tbody tr td {
+        text-align: center;
+    }
 }

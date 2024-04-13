@@ -27,6 +27,12 @@ def calculate_window_dimensions(x1, x2, q):
     e2 = b4 - 11.6
     y = a2 + 4
 
+    # Modify calculation for M
+    m = ((x1 + 10) * (x2 + 10)) / 10000
+
+    # Modify calculation for mt
+    mt = ((x1 + 10) * (x2 + 10)) / 10000
+
     return {
         'A1': a1,
         'A2': a2,
@@ -51,39 +57,35 @@ def calculate_window_dimensions(x1, x2, q):
         'G2': g2,
         'E1': e1,
         'E2': e2,
-        'Y': y
+        'Y': y,
+        'M': m,  # Include the modified calculation for M
+        'MT': mt  # Include the modified calculation for mt
     }
-
-
-def calculate_cost(mt, mp):
-    # Calculate total cost based on total square meters and price per square meter
-    return mt * mp
-
 
 def get_number_of_pieces():
     return {
         'A1': 2,
         'A2': 2,
-        'B1': 3,  # Update the number of pieces for each window type
-        'B2': 4,
-        'B3': 5,
-        'B4': 6,
-        'U': 7,
-        'C1': 8,
-        'C2': 9,
-        'D1': 10,
-        'D2': 11,
-		'T' :12 ,
-		'F' :13 ,
-		'R' :14 ,
-		'H' :15 ,
-		'K1' :16 ,
-		'K2' :17 ,
-		'J1' :18 ,
-		'J2' :19 ,
-		'G1' :20 ,
-		'G2' :21 ,
-		'E1' :22 ,
-		'E2' :23 ,
-        'Y': 24
+        'B1': 2,
+        'B2': 2,
+        'B3': 2,
+        'B4': 2,
+        'U': 2,
+        'C1': 2,
+        'C2': 2,
+        'D1': 2,
+        'D2': 2,
+        'T': 1,
+        'F': 1,
+        'R': 1,
+        'H': 1,
+        'K1': 2,
+        'K2': 2,
+        'J1': 2,
+        'J2': 2,
+        'G1': 2,
+        'G2': 2,
+        'E1': 2,
+        'E2': 2,
+        'Y': 2
     }

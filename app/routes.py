@@ -1,6 +1,12 @@
 from flask import render_template, request
 from app import app
-from app.calculations import calculate_window_dimensions, calculate_cost, get_number_of_pieces
+from app.calculations import calculate_window_dimensions, get_number_of_pieces
+
+
+# Placeholder for calculate_cost function
+def calculate_cost(mt, mp):
+    # Calculate total cost based on total square meters and price per square meter
+    return mt * mp
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -19,7 +25,7 @@ def index():
             mp = float(request.form[f'mp_{i}'])
 
             window_dimensions[i] = calculate_window_dimensions(x1, x2, q)
-            mt = (x1 * x2) / 10000
+            mt = ((x1 + 10) * (x2 + 10)) / 10000  # Modified calculation for mt
             mt_total += mt
             p_total += calculate_cost(mt, mp)
 
