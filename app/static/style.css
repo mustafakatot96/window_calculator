@@ -86,46 +86,6 @@ table caption {
     margin-bottom: 10px;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    form {
-        padding: 10px;
-    }
-
-    input[type="number"] {
-        width: 100%;
-    }
-
-    table {
-        display: block;
-        overflow-x: auto;
-    }
-
-    table thead,
-    table tbody,
-    table tr,
-    table th,
-    table td {
-        display: block;
-    }
-
-    table tbody tr td {
-        text-align: center;
-    }
-
-    /* Ensure table headers stack horizontally */
-    table th {
-        display: inline-block;
-        width: auto;
-    }
-
-    /* Ensure table cells stack horizontally */
-    table td {
-        display: inline-block;
-        width: 100%;
-    }
-}
-
 /* Image at the top right side */
 .image-top-right {
     position: absolute;
