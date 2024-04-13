@@ -112,4 +112,23 @@ table caption {
     table tbody tr td {
         text-align: center;
     }
+
+    /* Ensure table headers stack horizontally */
+    table th {
+        display: inline-block;
+        width: auto;
+    }
+
+    /* Ensure table cells stack horizontally */
+    table td {
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+/* Image at the top right side */
+.image-top-right {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
 }
